@@ -1,0 +1,209 @@
+/* Start Variable */
+:root{
+    --main-bg: #674bb2;
+}
+/* End Variable */
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--main-bg);
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small */
+
+@media (min-width: 768px) {
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* Start Global Rules */
+/* Start Page */
+.page{
+    background-color: var(--main-bg);
+    height: 100vh;
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* @media (max-width: 616px) {
+    .page{
+        background-image: url(../images/bg-mobile.svg);
+        height: 100vh;
+    }
+} */
+/* End Page */
+/* start Header */
+.page .header .logo{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.page .header .logo img{
+    max-width: 150px;
+}
+/* End Header */
+/* Start Landing */
+.page .landing .main{
+    display: flex;
+    margin-top: 40px;
+    gap: 25px;
+}
+.page .landing .imge{
+    flex-basis: 50%;
+
+}
+.page .landing img{
+    max-width: 100%;
+}
+.page .landing .text{
+    flex-basis: 50%;
+    padding: 30px 45px;
+    line-height: 1.4;
+}
+.page .landing .text h4{
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+.page .landing .text p{
+    line-height: 1.5;
+    color: #a89bb5;
+}
+.page .landing .text button {
+    margin-top: 20px;
+    width: 160px;
+    padding:15px 20px;
+    border: none;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.page .landing .text button:hover{
+    background-color: #e980e7;
+    
+}
+.page .landing .text button:hover a{
+    color: white;
+}
+.page .landing .text button a{
+    text-decoration: none;
+    color: var(--main-bg);
+}
+
+@media (max-width: 992px) and (min-width:617px){
+    .page{
+        background-size: cover;
+    }
+    .page .landing .text{
+        flex-basis: 50%;
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .page .landing .text h4{
+        font-size: 25px;
+        
+    }
+    .page .landing .imge{
+        flex-basis: 50%;
+        padding: 0px 20px;
+    }
+} 
+@media (max-width: 767px) {
+    .page{
+        background-image: url(../images/bg-mobile.svg);
+        height: 100vh;
+    }
+    .page .landing .main{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        
+    }
+    .page .landing .text{
+        flex-basis: 100%;
+        margin-top: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+    .page .landing .text h4{
+        font-size: 25px;
+        
+    }
+    .page .landing .imge{
+        flex-basis: 100%;
+        padding: 0px 20px;
+    }
+    .page .landing .text button {
+        margin-top: 20px;
+        width: 215px;
+        padding:15px 20px;
+    }
+}
+/* End Landing */
+/* Start Footer */
+.footer .social-icons{
+    display: flex;
+    justify-content: flex-end;
+}
+.footer .social-icons .box{
+    display: flex;
+    width: 34px;
+    justify-content: center;
+    padding: 9px 0;
+    margin-left: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.footer .social-icons div i{
+    color: white;
+}
+.footer .social-icons div:hover i{
+    color: #e980e7;
+}
+.footer .social-icons div:hover .box{
+    border-color: #ff85f7;
+    padding: 8px 0;
+    
+}
+@media (max-width: 767px) {
+    .footer .social-icons{
+        display: flex;
+        justify-content:center;
+        padding: 50px 0;
+    }
+}
+@media (max-width:1066px) and (min-width:617px){
+    .footer .social-icons{
+        margin-right: 15px;
+    }
+} 
+/* End Footer */
